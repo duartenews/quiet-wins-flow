@@ -46,10 +46,12 @@ const Hero = () => {
               — built for <span className="font-script text-black font-normal">ambitious women.</span>
             </h1>
             
+ 
+
             <p className="mt-6 text-lg lg:text-xl text-neutral-600 max-w-xl leading-relaxed">
-              Quiet Control gives you a{" "}
+              Quiet Control builds a{" "}
               <span className="font-semibold text-foreground">minimum-effective routine</span>{" "}
-              across body, food, home, appearance, finances, and career — and an intelligent agenda that fits your week. You validate; we propose.
+               across life’s essentials — with an agenda that adapts to your week.
             </p>
 
             {/* Waitlist Form */}
