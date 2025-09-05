@@ -47,7 +47,7 @@ export default function WhatYouGet() {
 
         {/* Coluna direita: mesmo SVG inline, 100% maior (scale 2x) */}
         <div className="lg:pl-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-          <div className="relative transform scale-[2] origin-top-left">
+          <div className="relative transform scale-[1.5] origin-top-left">
             <svg
               className="w-full rounded-2xl border border-neutral-200 shadow-soft"
               viewBox="0 0 920 520"
