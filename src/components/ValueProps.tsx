@@ -1,47 +1,24 @@
-import { TrendingUpIcon, BrainIcon, GiftIcon } from "lucide-react";
+import { BadgeCheck, Lock, Sparkles } from "lucide-react";
 
-const valueProps = [
-  {
-    icon: TrendingUpIcon,
-    title: "Micro-wins, not burnout",
-    description: "5–15 minute tasks that keep her life balanced while she climbs.",
-  },
-  {
-    icon: BrainIcon,
-    title: "Decision-light by design",
-    description: "We propose the routine. She just validates. Less friction, more consistency.",
-  },
-  {
-    icon: GiftIcon,
-    title: "Founding 500 perks",
-    description: "Lifetime price lock + ready-made packs for Body, Home, Hair, Skin, Food, Finance, Career.",
-  },
-];
+export default function ValueProps() {
+  const props = [
+    { icon: Sparkles, title: "Designed to be quiet", desc: "No feeds. No fluff. Just the few levers that move your week." },
+    { icon: BadgeCheck, title: "Made for momentum", desc: "Micro-wins stack until the big ones feel inevitable." },
+    // AJUSTE DE CÓPIA
+    { icon: Lock, title: "Founding 500 perks", desc: "Save big now, keep the same price forever." },
+  ];
 
-const ValueProps = () => {
   return (
-    <section className="mx-auto px-4 sm:px-6 lg:px-8 container-tight py-16">
-      <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-        {valueProps.map((prop, index) => (
-          <div
-            key={prop.title}
-            className="border border-neutral-200 rounded-2xl p-6 lg:p-8 hover:shadow-soft hover:border-primary/30 transition-smooth animate-slide-up"
-            style={{ animationDelay: `${index * 0.1}s` }}
-          >
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                <prop.icon className="w-5 h-5 text-primary" />
-              </div>
-              <h3 className="font-semibold text-foreground">{prop.title}</h3>
-            </div>
-            <p className="text-sm text-neutral-600 leading-relaxed">
-              {prop.description}
-            </p>
+    <section className="py-16 sm:py-20">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {props.map(({ icon: Icon, title, desc }) => (
+          <div key={title} className="rounded-2xl border border-neutral-200 p-6 bg-white">
+            <Icon className="w-6 h-6 text-primary mb-3" />
+            <h3 className="font-semibold">{title}</h3>
+            <p className="text-neutral-600 mt-2">{desc}</p>
           </div>
         ))}
       </div>
     </section>
   );
-};
-
-export default ValueProps;
+}

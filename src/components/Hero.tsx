@@ -19,22 +19,19 @@ const Hero = () => {
       return;
     }
 
-    // TODO: Replace with actual API call
     toast({
       title: "You're on the waitlist! 🎉",
       description: "We'll email your cohort date soon.",
     });
 
-    // Reset form
     setEmail("");
     setCity("");
   };
 
   return (
     <section className="relative overflow-hidden">
-      {/* Background with subtle gradient */}
       <div className="absolute inset-0 gradient-subtle"></div>
-      
+
       <div className="relative mx-auto px-4 sm:px-6 lg:px-8 container-tight py-20 sm:py-24">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="animate-fade-in">
@@ -43,15 +40,16 @@ const Hero = () => {
               <span className="relative">
                 <span className="underline decoration-primary/60 underline-offset-4">21 days</span>
               </span>{" "}
-              — built for <span className="font-script text-black font-normal">ambitious women.</span>
+              — built for{" "}
+              <span className="font-script text-black font-normal **text-[5.3rem]**">
+                ambitious women.
+              </span>
             </h1>
-            
- 
 
             <p className="mt-6 text-lg lg:text-xl text-neutral-600 max-w-xl leading-relaxed">
               Quiet Control builds a{" "}
               <span className="font-semibold text-foreground">minimum-effective routine</span>{" "}
-               across life’s essentials — with an agenda that adapts to your week.
+              across life’s essentials — with an agenda that adapts to your week.
             </p>
 
             {/* Waitlist Form */}
@@ -69,7 +67,7 @@ const Hero = () => {
                   className="w-full rounded-xl border border-neutral-200 px-4 py-3 text-sm bg-background focus:outline-none focus:ring-4 focus:ring-primary/30 focus:border-primary transition-smooth"
                 />
               </div>
-              
+
               <div className="sm:w-40">
                 <label htmlFor="city" className="sr-only">City</label>
                 <select
@@ -87,7 +85,7 @@ const Hero = () => {
                   <option>Other</option>
                 </select>
               </div>
-              
+
               <Button type="submit" variant="hero" size="lg">
                 Join the waitlist
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -100,7 +98,8 @@ const Hero = () => {
             <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-neutral-500">
               <span className="inline-flex items-center gap-2">
                 <CheckIcon className="w-4 h-4 text-primary" />
-                Founding 500 price lock
+                {/* SUBSTITUIÇÃO PEDIDA */}
+                Founding 500 — save big now, keep the same price forever
               </span>
               <span className="inline-flex items-center gap-2">
                 <ClockIcon className="w-4 h-4 text-primary" />
@@ -124,7 +123,7 @@ const Hero = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent"></div>
             </div>
-            
+
             {/* Floating elements */}
             <div className="absolute -top-6 -right-6 w-12 h-12 bg-primary rounded-full shadow-glow animate-float"></div>
             <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-primary-glow rounded-full shadow-soft animate-float" style={{ animationDelay: "2s" }}></div>
