@@ -1,5 +1,3 @@
-import heroImage from "@/assets/hero-image.jpg";
-
 export default function WhatYouGet() {
   const features = [
     { title: "Minimum-effective routines", desc: "Do less, get more. Tiny habits that compound without burning you out." },
@@ -47,15 +45,122 @@ export default function WhatYouGet() {
           </p>
         </div>
 
-        {/* Coluna direita: imagem 100% maior (2x) */}
-        <div className="lg:pl-8">
-          <div className="transform scale-[2] origin-top-left">
-            <img
-              src={heroImage}
-              alt="App preview"
-              className="w-full h-auto rounded-2xl border border-neutral-200"
-              loading="eager"
-            />
+        {/* Coluna direita: mesmo SVG inline, 100% maior (scale 2x) */}
+        <div className="lg:pl-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
+          <div className="relative transform scale-[2] origin-top-left">
+            <svg
+              className="w-full rounded-2xl border border-neutral-200 shadow-soft"
+              viewBox="0 0 920 520"
+              fill="none"
+              role="img"
+              aria-labelledby="app-preview-title"
+            >
+              <title id="app-preview-title">Quiet Control App Preview</title>
+              <rect x="1" y="1" width="918" height="518" rx="16" fill="white"></rect>
+              <rect x="1" y="1" width="918" height="518" rx="16" stroke="hsl(var(--neutral-200))"></rect>
+
+              <g transform="translate(40,40)">
+                <rect width="260" height="140" rx="12" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                <text x="20" y="36" fontFamily="Inter" fontSize="18" fill="hsl(var(--foreground))" fontWeight="700">
+                  1. Choose focus
+                </text>
+                <rect x="20" y="60" width="220" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                <circle cx="222" cy="80" r="6" fill="hsl(var(--primary))"></circle>
+                <text x="34" y="86" fontFamily="Inter" fontSize="14" fill="hsl(var(--foreground))" fontWeight="600">
+                  Body
+                </text>
+                <rect x="20" y="110" width="220" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                <circle cx="222" cy="130" r="6" fill="hsl(var(--primary))"></circle>
+                <text x="34" y="136" fontFamily="Inter" fontSize="14" fill="hsl(var(--foreground))" fontWeight="600">
+                  Home
+                </text>
+                <text x="20" y="180" fontFamily="Inter" fontSize="12" fill="hsl(var(--neutral-500))">
+                  Pick your priority in seconds.
+                </text>
+              </g>
+
+              <g transform="translate(330,40)">
+                <rect width="260" height="140" rx="12" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                <text x="20" y="36" fontFamily="Inter" fontSize="18" fill="hsl(var(--foreground))" fontWeight="700">
+                  2. Set time
+                </text>
+                <text x="20" y="68" fontFamily="Inter" fontSize="12" fill="hsl(var(--neutral-600))">
+                  How many minutes per day?
+                </text>
+                <rect x="20" y="84" width="120" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                <text x="34" y="110" fontFamily="Inter" fontSize="14" fill="hsl(var(--foreground))">
+                  10 min
+                </text>
+                <text x="20" y="146" fontFamily="Inter" fontSize="12" fill="hsl(var(--neutral-600))">
+                  Goal timeline?
+                </text>
+                <rect x="20" y="162" width="120" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                <text x="34" y="188" fontFamily="Inter" fontSize="14" fill="hsl(var(--foreground))">
+                  21 days
+                </text>
+              </g>
+
+              <g transform="translate(620,40)">
+                <rect width="260" height="140" rx="12" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                <text x="20" y="36" fontFamily="Inter" fontSize="18" fill="hsl(var(--foreground))" fontWeight="700">
+                  3. Accept your week
+                </text>
+                <g transform="translate(20,60)">
+                  <rect width="220" height="24" rx="8" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                  <circle cx="12" cy="12" r="6" fill="hsl(var(--primary))"></circle>
+                  <text x="30" y="16" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))">
+                    Accept all
+                  </text>
+                </g>
+                <g transform="translate(20,94)">
+                  <rect width="220" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                  <text x="16" y="28" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))">
+                    Hydrate • 2L • Daily
+                  </text>
+                </g>
+                <g transform="translate(20,144)">
+                  <rect width="220" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                  <text x="16" y="28" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))">
+                    Home reset • 7m • Weekly
+                  </text>
+                </g>
+              </g>
+
+              <g transform="translate(340,240)">
+                <rect width="240" height="240" rx="16" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                <text x="20" y="36" fontFamily="Inter" fontSize="16" fill="hsl(var(--foreground))" fontWeight="700">
+                  Today View
+                </text>
+                <g transform="translate(20,60)">
+                  <rect width="200" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                  <circle cx="180" cy="20" r="6" fill="hsl(var(--primary))"></circle>
+                  <text x="16" y="26" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))" fontWeight="600">
+                    Body • 10m
+                  </text>
+                </g>
+                <g transform="translate(20,110)">
+                  <rect width="200" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                  <circle cx="180" cy="20" r="6" fill="hsl(var(--primary))"></circle>
+                  <text x="16" y="26" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))" fontWeight="600">
+                    Home • 7m
+                  </text>
+                </g>
+                <g transform="translate(20,160)">
+                  <rect width="200" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                  <circle cx="180" cy="20" r="6" fill="hsl(var(--primary))"></circle>
+                  <text x="16" y="26" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))" fontWeight="600">
+                    Hair • 5m
+                  </text>
+                </g>
+                <g transform="translate(20,210)">
+                  <rect width="200" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
+                  <circle cx="180" cy="20" r="6" fill="hsl(var(--primary))"></circle>
+                  <text x="16" y="26" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))" fontWeight="600">
+                    Finance • 8m
+                  </text>
+                </g>
+              </g>
+            </svg>
           </div>
         </div>
       </div>
