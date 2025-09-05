@@ -1,18 +1,17 @@
-import previewSvg from "@/assets/preview.svg"; // se não usar SVG, ajuste import
-import Image from "next/image";
+import previewSvg from "@/assets/preview.svg"; // ajuste o caminho se seu asset tiver outro nome
 
 export default function WhatYouGet() {
   const features = [
     { title: "Minimum-effective routines", desc: "Do less, get more. Tiny habits that compound without burning you out." },
     { title: "Adaptive agenda", desc: "Adjusts to your season, constraints, and weekly reality." },
     { title: "Private by default", desc: "Your data stays yours. No noisy feeds, no social pressure." },
-    // REMOVIDO: item de idioma EN/PT-BR
+    // REMOVIDO: item EN/PT-BR
   ];
 
   const perks = [
     { title: "Foundational templates", desc: "Start with proven layouts and tune to your life." },
     { title: "Focus helpers", desc: "Micro-prompts and checklists for clarity in 30 seconds." },
-    // o perk do Founding 500 vai ficar POR ÚLTIMO com a nova frase:
+    // Founding 500 fica por último
     { title: "Founding 500", desc: "Save big now, keep the same price forever." },
   ];
 
@@ -42,7 +41,7 @@ export default function WhatYouGet() {
             ))}
           </ul>
 
-          {/* Slogan no final, como pedido */}
+          {/* Slogan no final */}
           <p className="mt-6 font-medium">
             Founding 500 — save big now, keep the same price forever.
           </p>
@@ -50,16 +49,13 @@ export default function WhatYouGet() {
 
         {/* Coluna direita: imagem 100% maior */}
         <div className="lg:pl-8">
-          {/* Wrapper com scale 2x (100% maior) */}
-          <div className="scale-[2] origin-top-left">
-            {/* Se usar Image do Next */}
-            <Image
+          <div className="transform scale-[2] origin-top-left">
+            <img
               src={previewSvg}
               alt="App preview"
               className="w-full h-auto"
-              priority
+              loading="eager"
             />
-            {/* Caso seu preview seja um <svg> inline, envolva o <svg> aqui dentro desse div com scale-[2] */}
           </div>
         </div>
       </div>
