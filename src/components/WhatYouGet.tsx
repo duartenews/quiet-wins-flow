@@ -15,7 +15,7 @@ export default function WhatYouGet() {
 
   return (
     <section className="py-16 sm:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+      <div className="container-tight mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
         {/* Coluna esquerda: lista */}
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">What you’ll get</h2>

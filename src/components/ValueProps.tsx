@@ -10,7 +10,7 @@ export default function ValueProps() {
 
   return (
     <section className="py-16 sm:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="container-tight mx-auto px-4 sm:px-6 lg:px-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {props.map(({ icon: Icon, title, desc }) => (
           <div key={title} className="rounded-2xl border border-neutral-200 p-6 bg-white">
             <Icon className="w-6 h-6 text-primary mb-3" />

@@ -16,7 +16,7 @@ export default function FAQ() {
 
   return (
     <section className="py-16 sm:py-20">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+      <div className="container-tight mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
         <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">FAQ</h2>
         <div className="mt-8 space-y-6">
           {faqs.map(({ q, a }) => (
