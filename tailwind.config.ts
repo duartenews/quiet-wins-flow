@@ -26,15 +26,13 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
+					glow: 'hsl(var(--primary-glow))',
+					dark: 'hsl(var(--primary-dark))',
 					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
-				},
-				destructive: {
-					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))'
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
@@ -44,13 +42,21 @@ export default {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
-				popover: {
-					DEFAULT: 'hsl(var(--popover))',
-					foreground: 'hsl(var(--popover-foreground))'
-				},
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				neutral: {
+					50: 'hsl(var(--neutral-50))',
+					100: 'hsl(var(--neutral-100))',
+					200: 'hsl(var(--neutral-200))',
+					300: 'hsl(var(--neutral-300))',
+					400: 'hsl(var(--neutral-400))',
+					500: 'hsl(var(--neutral-500))',
+					600: 'hsl(var(--neutral-600))',
+					700: 'hsl(var(--neutral-700))',
+					800: 'hsl(var(--neutral-800))',
+					900: 'hsl(var(--neutral-900))',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
