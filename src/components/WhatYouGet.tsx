@@ -1,51 +1,74 @@
 export default function WhatYouGet() {
-  const features = [
-    { title: "Minimum-effective routines", desc: "Do less, get more. Tiny habits that compound without burning you out." },
-    { title: "Adaptive agenda", desc: "Adjusts to your season, constraints, and weekly reality." },
-    { title: "Private by default", desc: "Your data stays yours. No noisy feeds, no social pressure." },
-    // REMOVIDO: item EN/PT-BR
+  // Bullets da esquerda (sem EN/PT-BR)
+  const features: string[] = [
+    "A 'Today' view with 3–6 focused blocks — not 25 noisy tasks.",
+    "Minimum-effective routines across Body, Food, Home, Appearance, Finances, Career.",
+    "One-tap ‘Accept all for the week’.",
+    "Streaks and weekly goals to reinforce micro-wins.",
   ];
 
+  // Cards de perks
   const perks = [
-    { title: "Foundational templates", desc: "Start with proven layouts and tune to your life." },
-    { title: "Focus helpers", desc: "Micro-prompts and checklists for clarity in 30 seconds." },
-    // Founding 500 por último com a nova copy:
-    { title: "Founding 500", desc: "Save big now, keep the same price forever." },
+    {
+      title: "Founding 500",
+      desc: "Save big now, keep the same price forever.",
+      badge: "LIMITED",
+    },
+    {
+      title: "Cohorts every Monday",
+      desc: "Rolling admission to keep support and onboarding clean.",
+    },
+    {
+      title: "Risk-free start",
+      desc: "Onboarding ≤ 2 minutes or your first month is free (when subscriptions open).",
+    },
   ];
 
   return (
     <section className="py-16 sm:py-20">
       <div className="container-tight mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-        {/* Coluna esquerda: lista */}
+        {/* Coluna esquerda */}
         <div>
           <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">What you’ll get</h2>
 
-          <div className="mt-8 space-y-6">
-            {features.map((f) => (
-              <div key={f.title} className="rounded-2xl border border-neutral-200 p-6 bg-white">
-                <h3 className="font-semibold">{f.title}</h3>
-                <p className="text-neutral-600 mt-2">{f.desc}</p>
-              </div>
-            ))}
-          </div>
-
-          <h3 className="mt-10 text-lg font-semibold">Perks</h3>
-          <ul className="mt-4 space-y-4">
-            {perks.map((p) => (
-              <li key={p.title} className="flex flex-col">
-                <span className="font-medium">{p.title}</span>
-                <span className="text-neutral-600">{p.desc}</span>
+          {/* Bullet list */}
+          <ul className="mt-6 space-y-4 list-disc pl-6 marker:text-neutral-300">
+            {features.map((text) => (
+              <li key={text} className="text-neutral-700">
+                {text}
               </li>
             ))}
           </ul>
 
-          {/* Slogan no final */}
+          {/* Perks cards */}
+          <div className="mt-8 space-y-4">
+            {perks.map((p) => (
+              <div
+                key={p.title}
+                className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft"
+              >
+                <div className="flex items-start justify-between gap-4">
+                  <div>
+                    <h3 className="font-semibold">{p.title}</h3>
+                    <p className="text-neutral-600 mt-2">{p.desc}</p>
+                  </div>
+                  {p.badge ? (
+                    <span className="text-xs rounded-full border border-neutral-300 px-2 py-1 text-neutral-600">
+                      {p.badge}
+                    </span>
+                  ) : null}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Slogan final (pedido) */}
           <p className="mt-6 font-medium">
             Founding 500 — save big now, keep the same price forever.
           </p>
         </div>
 
-        {/* Coluna direita: mesmo SVG inline, 100% maior (scale 2x) */}
+        {/* Coluna direita: SVG inline, levemente ampliado */}
         <div className="lg:pl-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
           <div className="relative transform scale-[1.5] origin-top-left">
             <svg
