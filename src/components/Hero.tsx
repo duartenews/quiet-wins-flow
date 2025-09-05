@@ -43,7 +43,7 @@ const Hero = () => {
               <span className="relative">
                 <span className="underline decoration-primary/60 underline-offset-4">21 days</span>
               </span>{" "}
-              — built for <span className="font-script text-primary font-normal">ambitious women.</span>
+              — built for <span className="font-script text-black font-normal">ambitious women.</span>
             </h1>
             
             <p className="mt-6 text-lg lg:text-xl text-neutral-600 max-w-xl leading-relaxed">
