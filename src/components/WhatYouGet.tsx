@@ -1,4 +1,4 @@
-import previewSvg from "@/assets/preview.svg"; // ajuste o caminho se seu asset tiver outro nome
+import heroImage from "@/assets/hero-image.jpg";
 
 export default function WhatYouGet() {
   const features = [
@@ -11,7 +11,7 @@ export default function WhatYouGet() {
   const perks = [
     { title: "Foundational templates", desc: "Start with proven layouts and tune to your life." },
     { title: "Focus helpers", desc: "Micro-prompts and checklists for clarity in 30 seconds." },
-    // Founding 500 fica por último
+    // Founding 500 por último com a nova copy:
     { title: "Founding 500", desc: "Save big now, keep the same price forever." },
   ];
 
@@ -47,13 +47,13 @@ export default function WhatYouGet() {
           </p>
         </div>
 
-        {/* Coluna direita: imagem 100% maior */}
+        {/* Coluna direita: imagem 100% maior (2x) */}
         <div className="lg:pl-8">
           <div className="transform scale-[2] origin-top-left">
             <img
-              src={previewSvg}
+              src={heroImage}
               alt="App preview"
-              className="w-full h-auto"
+              className="w-full h-auto rounded-2xl border border-neutral-200"
               loading="eager"
             />
           </div>
