@@ -61,11 +61,6 @@ export default function WhatYouGet() {
               </div>
             ))}
           </div>
-
-          {/* Slogan final (pedido) */}
-          <p className="mt-6 font-medium">
-            Founding 500 — save big now, keep the same price forever.
-          </p>
         </div>
 
         {/* Coluna direita: SVG inline, levemente ampliado */}
