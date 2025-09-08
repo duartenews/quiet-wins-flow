@@ -115,7 +115,7 @@ const Hero = () => {
                 <span className="underline decoration-primary/60 underline-offset-4">21 days</span>
               </span>{" "}
               — built for{" "}
-              <span className="font-script text-black font-normal text-[5.3rem]">
+              <span className="font-script text-black font-normal text-[3.5rem]">
                 ambitious women.
               </span>
             </h1>

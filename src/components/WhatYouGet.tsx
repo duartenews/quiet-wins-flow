@@ -1,184 +1,120 @@
 export default function WhatYouGet() {
-  // Bullets da esquerda (sem EN/PT-BR)
   const features: string[] = [
     "A 'Today' view with 3–6 focused blocks — not 25 noisy tasks.",
     "Minimum-effective routines across Body, Food, Home, Appearance, Finances, Career.",
-    "One-tap ‘Accept all for the week’.",
     "Streaks and weekly goals to reinforce micro-wins.",
-  ];
-
-  // Cards de perks
-  const perks = [
-    {
-      title: "Founding 500",
-      desc: "Save big now, keep the same price forever.",
-      badge: "LIMITED",
-    },
-    {
-      title: "Cohorts every Monday",
-      desc: "Rolling admission to keep support and onboarding clean.",
-    },
-    {
-      title: "Risk-free start",
-      desc: "Onboarding ≤ 2 minutes or your first month is free (when subscriptions open).",
-    },
   ];
 
   return (
     <section className="py-16 sm:py-20">
-      <div className="container-tight mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-        {/* Coluna esquerda */}
-        <div>
-          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">What you’ll get</h2>
+      <div className="container-tight mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl sm:text-3xl font-bold tracking-tight">What you’ll get</h2>
 
-          {/* Bullet list */}
-          <ul className="mt-6 space-y-4 list-disc pl-6 marker:text-neutral-300">
-            {features.map((text) => (
-              <li key={text} className="text-neutral-700">
-                {text}
-              </li>
-            ))}
-          </ul>
-
-          {/* Perks cards */}
-          <div className="mt-8 space-y-4">
-            {perks.map((p) => (
-              <div
-                key={p.title}
-                className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-soft"
-              >
-                <div className="flex items-start justify-between gap-4">
-                  <div>
-                    <h3 className="font-semibold">{p.title}</h3>
-                    <p className="text-neutral-600 mt-2">{p.desc}</p>
-                  </div>
-                  {p.badge ? (
-                    <span className="text-xs rounded-full border border-neutral-300 px-2 py-1 text-neutral-600">
-                      {p.badge}
-                    </span>
-                  ) : null}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Coluna direita: SVG inline, levemente ampliado */}
-        <div className="lg:pl-8 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-          <div className="relative transform scale-[1.5] origin-top-left">
+        <div className="mt-8 grid lg:grid-cols-[1fr_0.9fr] gap-12 lg:gap-16 items-start">
+          {/* Visual */}
+          <div className="order-2 lg:order-1">
             <svg
-              className="w-full rounded-2xl border border-neutral-200 shadow-soft"
+              className="w-full rounded-2xl border border-neutral-200/70"
               viewBox="0 0 920 520"
               fill="none"
               role="img"
-              aria-labelledby="app-preview-title"
+              aria-labelledby="wyq-visual"
             >
-              <title id="app-preview-title">Quiet Control App Preview</title>
-              <rect x="1" y="1" width="918" height="518" rx="16" fill="white"></rect>
-              <rect x="1" y="1" width="918" height="518" rx="16" stroke="hsl(var(--neutral-200))"></rect>
+              <title id="wyq-visual">Quiet Control – Visual</title>
+              <rect x="1" y="1" width="918" height="518" rx="16" fill="white" />
+              <rect x="1" y="1" width="918" height="518" rx="16" stroke="hsl(var(--neutral-200))" />
 
-              <g transform="translate(40,40)">
-                <rect width="260" height="140" rx="12" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                <text x="20" y="36" fontFamily="Inter" fontSize="18" fill="hsl(var(--foreground))" fontWeight="700">
-                  1. Choose focus
-                </text>
-                <rect x="20" y="60" width="220" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                <circle cx="222" cy="80" r="6" fill="hsl(var(--primary))"></circle>
-                <text x="34" y="86" fontFamily="Inter" fontSize="14" fill="hsl(var(--foreground))" fontWeight="600">
-                  Body
-                </text>
-                <rect x="20" y="110" width="220" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                <circle cx="222" cy="130" r="6" fill="hsl(var(--primary))"></circle>
-                <text x="34" y="136" fontFamily="Inter" fontSize="14" fill="hsl(var(--foreground))" fontWeight="600">
-                  Home
-                </text>
-                <text x="20" y="180" fontFamily="Inter" fontSize="12" fill="hsl(var(--neutral-500))">
-                  Pick your priority in seconds.
-                </text>
+              <g transform="translate(56,56)">
+                <rect width="240" height="120" rx="12" fill="white" stroke="hsl(var(--neutral-200))" />
+                <rect x="20" y="28" width="88" height="16" rx="8" fill="hsl(var(--neutral-200))" />
+                <rect x="20" y="60" width="90" height="28" rx="8" fill="white" stroke="hsl(var(--neutral-200))" />
+                <rect x="118" y="60" width="90" height="28" rx="8" fill="white" stroke="hsl(var(--neutral-200))" />
               </g>
 
-              <g transform="translate(330,40)">
-                <rect width="260" height="140" rx="12" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                <text x="20" y="36" fontFamily="Inter" fontSize="18" fill="hsl(var(--foreground))" fontWeight="700">
-                  2. Set time
-                </text>
-                <text x="20" y="68" fontFamily="Inter" fontSize="12" fill="hsl(var(--neutral-600))">
-                  How many minutes per day?
-                </text>
-                <rect x="20" y="84" width="120" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                <text x="34" y="110" fontFamily="Inter" fontSize="14" fill="hsl(var(--foreground))">
-                  10 min
-                </text>
-                <text x="20" y="146" fontFamily="Inter" fontSize="12" fill="hsl(var(--neutral-600))">
-                  Goal timeline?
-                </text>
-                <rect x="20" y="162" width="120" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                <text x="34" y="188" fontFamily="Inter" fontSize="14" fill="hsl(var(--foreground))">
-                  21 days
-                </text>
+              <g transform="translate(340,56)">
+                <rect width="240" height="120" rx="12" fill="white" stroke="hsl(var(--neutral-200))" />
+                <rect x="20" y="28" width="70" height="16" rx="8" fill="hsl(var(--neutral-200))" />
+                <rect x="20" y="76" width="200" height="6" rx="3" fill="hsl(var(--neutral-200))" />
+                <circle cx="120" cy="79" r="10" fill="white" stroke="hsl(var(--primary))" strokeWidth="2" />
               </g>
 
-              <g transform="translate(620,40)">
-                <rect width="260" height="140" rx="12" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                <text x="20" y="36" fontFamily="Inter" fontSize="18" fill="hsl(var(--foreground))" fontWeight="700">
-                  3. Accept your week
-                </text>
-                <g transform="translate(20,60)">
-                  <rect width="220" height="24" rx="8" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                  <circle cx="12" cy="12" r="6" fill="hsl(var(--primary))"></circle>
-                  <text x="30" y="16" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))">
-                    Accept all
-                  </text>
+              <g transform="translate(624,56)">
+                <rect width="240" height="120" rx="12" fill="white" stroke="hsl(var(--neutral-200))" />
+                <rect x="20" y="28" width="90" height="16" rx="8" fill="hsl(var(--neutral-200))" />
+                <rect x="20" y="70" width="76" height="28" rx="14" fill="white" stroke="hsl(var(--neutral-200))" />
+                <circle cx="52" cy="84" r="10" fill="hsl(var(--primary))" />
+              </g>
+
+              <g transform="translate(56,220)">
+                <rect width="560" height="240" rx="16" fill="white" stroke="hsl(var(--neutral-200))" />
+                <g transform="translate(20,50)">
+                  <rect width="520" height="42" rx="10" fill="white" stroke="hsl(var(--neutral-200))" />
+                  <circle cx="500" cy="71" r="6" fill="hsl(var(--primary))" />
                 </g>
-                <g transform="translate(20,94)">
-                  <rect width="220" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                  <text x="16" y="28" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))">
-                    Hydrate • 2L • Daily
-                  </text>
+                <g transform="translate(20,104)">
+                  <rect width="520" height="42" rx="10" fill="white" stroke="hsl(var(--neutral-200))" />
+                  <circle cx="500" cy="125" r="6" fill="hsl(var(--primary))" />
                 </g>
-                <g transform="translate(20,144)">
-                  <rect width="220" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                  <text x="16" y="28" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))">
-                    Home reset • 7m • Weekly
-                  </text>
+                <g transform="translate(20,158)">
+                  <rect width="520" height="42" rx="10" fill="white" stroke="hsl(var(--neutral-200))" />
+                  <circle cx="500" cy="179" r="6" fill="hsl(var(--primary))" />
                 </g>
               </g>
 
-              <g transform="translate(340,240)">
-                <rect width="240" height="240" rx="16" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                <text x="20" y="36" fontFamily="Inter" fontSize="16" fill="hsl(var(--foreground))" fontWeight="700">
-                  Today View
-                </text>
-                <g transform="translate(20,60)">
-                  <rect width="200" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                  <circle cx="180" cy="20" r="6" fill="hsl(var(--primary))"></circle>
-                  <text x="16" y="26" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))" fontWeight="600">
-                    Body • 10m
-                  </text>
-                </g>
-                <g transform="translate(20,110)">
-                  <rect width="200" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                  <circle cx="180" cy="20" r="6" fill="hsl(var(--primary))"></circle>
-                  <text x="16" y="26" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))" fontWeight="600">
-                    Home • 7m
-                  </text>
-                </g>
-                <g transform="translate(20,160)">
-                  <rect width="200" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                  <circle cx="180" cy="20" r="6" fill="hsl(var(--primary))"></circle>
-                  <text x="16" y="26" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))" fontWeight="600">
-                    Hair • 5m
-                  </text>
-                </g>
-                <g transform="translate(20,210)">
-                  <rect width="200" height="40" rx="10" fill="white" stroke="hsl(var(--neutral-200))"></rect>
-                  <circle cx="180" cy="20" r="6" fill="hsl(var(--primary))"></circle>
-                  <text x="16" y="26" fontFamily="Inter" fontSize="12" fill="hsl(var(--foreground))" fontWeight="600">
-                    Finance • 8m
-                  </text>
+              <g transform="translate(640,220)">
+                <rect width="224" height="240" rx="16" fill="white" stroke="hsl(var(--neutral-200))" />
+                <g transform="translate(16,24)">
+                  <g>
+                    <rect x="0" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                    <rect x="34" y="0" width="26" height="26" rx="6" fill="hsl(var(--neutral-200))" />
+                    <rect x="68" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                    <rect x="102" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                    <rect x="136" y="0" width="26" height="26" rx="6" fill="hsl(var(--neutral-200))" />
+                    <rect x="170" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                  </g>
+                  <g transform="translate(0,32)">
+                    <rect x="0" y="0" width="26" height="26" rx="6" fill="hsl(var(--neutral-200))" />
+                    <rect x="34" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                    <rect x="68" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                    <rect x="102" y="0" width="26" height="26" rx="6" fill="hsl(var(--neutral-200))" />
+                    <rect x="136" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                    <rect x="170" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                  </g>
+                  <g transform="translate(0,64)">
+                    <rect x="0" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                    <rect x="34" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                    <rect x="68" y="0" width="26" height="26" rx="6" fill="hsl(var(--neutral-200))" />
+                    <rect x="102" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                    <rect x="136" y="0" width="26" height="26" rx="6" fill="white" stroke="hsl(var(--neutral-200))" />
+                    <rect x="170" y="0" width="26" height="26" rx="6" fill="hsl(var(--neutral-200))" />
+                  </g>
                 </g>
               </g>
             </svg>
+          </div>
+
+          {/* Lista mais amigável */}
+          <div className="order-1 lg:order-2 lg:pl-10 lg:max-w-prose">
+            <ul className="space-y-6 text-neutral-700">
+              <li className="flex gap-3">
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-primary/70" />
+                <p className="text-[15px] sm:text-base lg:text-[17px] leading-8">
+                  <span className="font-semibold text-foreground">'Today' view</span> with 3–6 focused blocks — not 25 noisy tasks.
+                </p>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-primary/70" />
+                <p className="text-[15px] sm:text-base lg:text-[17px] leading-8">
+                  <span className="font-semibold text-foreground">Minimum-effective routines</span> across Body, Food, Home, Appearance, Finances, Career.
+                </p>
+              </li>
+              <li className="flex gap-3">
+                <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-primary/70" />
+                <p className="text-[15px] sm:text-base lg:text-[17px] leading-8">
+                  <span className="font-semibold text-foreground">Streaks & weekly goals</span> to reinforce micro-wins.
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
       </div>
